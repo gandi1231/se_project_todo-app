@@ -5,7 +5,7 @@ import FormValidator from "../components/FormValidator.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
-const addTodoForm = addTodoPopup.querySelector(".popup__form");
+const addTodoForm = document.forms["add-todo-form"];
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
 const todoList = document.querySelector(".todos__list");
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
@@ -54,13 +54,11 @@ addTodoForm.addEventListener("submit", (event) => {
     date,
   };
 
-  const todoElement = generateTodo(todoData);
-  todoList.append(todoElement);
+  renderTodo(todoData);
   closeModal(addTodoPopup);
   newTodoValidator.resetValidation();
 });
 
 initialTodos.forEach((item) => {
-  const todoElement = generateTodo(item);
-  todoList.append(todoElement);
+  renderTodo(item);
 });

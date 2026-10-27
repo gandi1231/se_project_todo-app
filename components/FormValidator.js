@@ -70,7 +70,7 @@ class FormValidator {
       inputElement.classList.remove(this._settings.inputErrorClass);
     });
 
-    this._submitButton.disabled = true;
+    this.toggleButtonState();
     this._submitButton.classList.add(this._settings.inactiveButtonClass);
   }
 
