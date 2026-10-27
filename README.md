@@ -14,4 +14,4 @@ This project uses vanilla JavaScript, ES6 classes, HTML, CSS, and BEM-style bloc
 
 This project is deployed on GitHub Pages:
 
-- https://your-github-username.github.io/simple-todo-app
+- https://gandi1231.github.io/se_project_todo-app/
